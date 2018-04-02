@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_tutor"
+        title="主页"
+        icon="@drawable/ic_home_black_24dp"
+        barColorWhenSelected="#444444"
+        />
+    <tab
+        id="@+id/tab_student"
+        title="学员"
+        icon="@drawable/ic_person_black_24dp"
+        barColorWhenSelected="#555555"
+        />
+    <tab
+        id="@+id/tab_setting"
+        title="设置"
+        icon="@drawable/ic_settings_black_24dp"
+        barColorWhenSelected="#333333"
+        />
+</tabs>
