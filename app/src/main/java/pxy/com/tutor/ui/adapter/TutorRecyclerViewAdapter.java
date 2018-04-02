@@ -1,8 +1,15 @@
 package pxy.com.tutor.ui.adapter;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,8 +52,17 @@ public class TutorRecyclerViewAdapter extends RecyclerView.Adapter {
         if (holder instanceof TutorViewHolder) {
             ((TutorViewHolder) holder).tvTutorName.setText(dataBeans.get(position).getName());
             ((TutorViewHolder) holder).tvTutorAddress.setText(dataBeans.get(position).getAddress());
-            Glide.with(activity).load(dataBeans.get(position).getHeadUrl()).transform(new GlideCircleTransform(activity))
-                    .into(((TutorViewHolder) holder).imgImageHead);
+            String headUrl = dataBeans.get(position).getHeadUrl();
+            if (TextUtils.isEmpty(headUrl)){
+                Resources res = activity.getResources();
+                Bitmap bmp = BitmapFactory.decodeResource(res, R.drawable.default_head);
+                ((TutorViewHolder) holder).imgImageHead.setImageBitmap(bmp);
+            }
+            else {
+                Glide.with(activity).load(headUrl).transform(new GlideCircleTransform(activity))
+                        .into(((TutorViewHolder) holder).imgImageHead);
+            }
+
             ((TutorViewHolder) holder).btnSeeDetail.setTag(position);
             ((TutorViewHolder) holder).btnSeeDetail.setOnClickListener(see_Click);
         }

@@ -3,10 +3,7 @@ package pxy.com.tutor.socketservice;
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.Callable;
 
 public class SubPolThread implements Runnable {
     private Socket connection;
@@ -27,8 +24,7 @@ public class SubPolThread implements Runnable {
      */
     private void readMessageFromClient(InputStream inputStream) throws IOException {
 
-        int available = inputStream.available();
-        byte[] data = new byte[available];
+        byte[] data = new byte[1024];
         inputStream.read(data);
         List<Byte> bytes = ListUtil.bytesToList(data);
         receiveDatas.addAll(bytes);
@@ -51,12 +47,14 @@ public class SubPolThread implements Runnable {
                 boolean isTutor = stream.readBoolean();
                 String NO = stream.readShortString();
                 String targetNo = stream.readShortString();
-                String Content = stream.readShortString();
+                String content = stream.readShortString();
+                String hostIp = stream.readShortString();
                 byte foot = stream.readByte();
                 int totalLength = 1 + 4 + length + 1;
-                byte[] parseData = ListUtil.getRange(ListUtil.listTobyte(receiveDatas), 0, totalLength);
-                System.out.println(Content);
-                ListUtil.removeRange(receiveDatas, 0, totalLength);
+                ListUtil.getRange(ListUtil.listTobyte(receiveDatas), 0, totalLength);
+                System.out.println(content);
+                receiveDatas.clear();
+                SocketService.getInstance().callReceived(content,isTutor,NO);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -75,7 +73,6 @@ public class SubPolThread implements Runnable {
         writer.flush();
         writer.close();
     }
-
 
 
     @Override

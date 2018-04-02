@@ -7,18 +7,19 @@ import com.pxy.pangjiao.net.helper.PNet;
  * Created by pxy on 2018/4/1.
  */
 
-@PNet(api = "http://192.168.102:8080/studentLogin")
+@PNet(api = "studentLogin")
 public class StudentLoginRequest extends NetModel<StudentLoginResponse> {
 
-    private String NO;
+    private String no;
     private String pwd;
 
-    public String getNO() {
-        return NO;
+
+    public String getNo() {
+        return no;
     }
 
-    public void setNO(String NO) {
-        this.NO = NO;
+    public void setNo(String no) {
+        this.no = no;
     }
 
     public String getPwd() {

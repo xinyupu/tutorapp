@@ -1,4 +1,4 @@
-package pxy.com.tutor;
+package pxy.com.tutor.globle;
 
 import android.app.Application;
 
@@ -16,7 +16,9 @@ public class TutorApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        PangJiao.init(this, new NetDefaultConfig().setHost("http://192.168.1.102:8080/"));
-        SocketService.createInstance();
+        PangJiao.init(this, new NetDefaultConfig().setHost("http://192.168.100.10:8080/"));
+       // PangJiao.init(this, new NetDefaultConfig().setHost("http://10.0.0.2:8080/"));
+        Environment.create();
+        SocketService.createInstance("192.168.100.10");
     }
 }

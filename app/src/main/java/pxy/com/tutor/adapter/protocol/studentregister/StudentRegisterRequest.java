@@ -7,7 +7,7 @@ import com.pxy.pangjiao.net.helper.PNet;
  * Created by pxy on 2018/4/1.
  */
 
-@PNet(api = "http://192.168.102:8080/registerStudent")
+@PNet(api = "registerStudent")
 public class StudentRegisterRequest extends NetModel<StudentRegisterResponse> {
 
 

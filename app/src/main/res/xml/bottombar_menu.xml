@@ -6,10 +6,16 @@
         icon="@drawable/ic_home_black_24dp"
         barColorWhenSelected="#444444"
         />
-    <tab
+    <!--<tab
         id="@+id/tab_student"
         title="学员"
         icon="@drawable/ic_person_black_24dp"
+        barColorWhenSelected="#555555"
+        />-->
+    <tab
+        id="@+id/tab_chat"
+        title="聊天"
+        icon="@drawable/ic_chat_bubble_black_24dp"
         barColorWhenSelected="#555555"
         />
     <tab

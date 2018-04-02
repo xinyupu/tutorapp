@@ -10,8 +10,8 @@ import java.net.URLEncoder;
  * Created by pxy on 2018/3/31.
  */
 
-@PNet(api = "http://192.168.1.102:8080/getTutors",method = "GET")
-public class GetTutorRequest extends NetModel<GetTutorsResponse> {
+@PNet(api = "getTutors",method = "GET")
+public class GetTutorsRequest extends NetModel<GetTutorsResponse> {
     private int page;
     private String city;
 

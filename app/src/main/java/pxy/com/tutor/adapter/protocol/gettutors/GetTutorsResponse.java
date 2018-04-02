@@ -55,7 +55,7 @@ public class GetTutorsResponse {
         private String canTeach;
         private String majorTeach;
         private String descTeach;
-        private Object headUrl;
+        private String headUrl;
         private String address;
         private int id;
 
@@ -123,11 +123,11 @@ public class GetTutorsResponse {
             this.descTeach = descTeach;
         }
 
-        public Object getHeadUrl() {
+        public String getHeadUrl() {
             return headUrl;
         }
 
-        public void setHeadUrl(Object headUrl) {
+        public void setHeadUrl(String headUrl) {
             this.headUrl = headUrl;
         }
 

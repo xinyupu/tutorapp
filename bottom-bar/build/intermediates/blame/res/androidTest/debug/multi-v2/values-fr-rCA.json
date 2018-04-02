@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\work\\tutorapp\\bottom-bar\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
+            "outputFile": "F:\\work\\tutorapp\\bottom-bar\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pxy\\.gradle\\wrapper\\dists\\gradle-4.2-all\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\e09dc944f1fae66060d2c19f4417633a\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\cbcf28a40260a0586393ff4019792731\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pxy\\.gradle\\wrapper\\dists\\gradle-4.2-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\b5baa6d88ba28f31bb62a68698060d69\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\a4651e445cba39da514fad7ca737acec\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

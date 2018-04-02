@@ -1,35 +1,35 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
+ADDED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
 	package
-		ADDED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:11-43
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		ADDED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:11-43
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-		ADDED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		ADDED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-		ADDED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		ADDED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml:1:1-46
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
 uses-sdk
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-		ADDED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		ADDED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-		ADDED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
-		INJECTED from E:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		ADDED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml
+		INJECTED from F:\work\tutorapp\bottom-bar\src\main\AndroidManifest.xml

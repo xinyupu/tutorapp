@@ -29,10 +29,13 @@ import pxy.com.tutor.R;
 import pxy.com.tutor.application.IPublicView;
 import pxy.com.tutor.application.ITutorPresent;
 import pxy.com.tutor.application.imp.TouristService;
+import pxy.com.tutor.globle.Env;
 import pxy.com.tutor.socketservice.SocketService;
+import pxy.com.tutor.ui.fragment.ChatFragment;
 import pxy.com.tutor.ui.fragment.SettingFragment;
 import pxy.com.tutor.ui.fragment.StudentFragment;
 import pxy.com.tutor.ui.fragment.TutorFragment;
+import pxy.com.tutor.ui.utils.IpGetUtil;
 
 @Views
 public class MainActivity extends PJAppCompatActivity {
@@ -61,11 +64,13 @@ public class MainActivity extends PJAppCompatActivity {
     SettingFragment settingFragment;
     StudentFragment studentFragment;
     TutorFragment tutorFragment;
+    ChatFragment chatFragment;
 
     String currentTag = "tutorFragment";
     public String currentCity = "广州";
     private final String TutorFragment = "tutorFragment";
     private final String StudentFragment = "studentFragment";
+    private final String ChatFragment = "chatFragment";
 
     @Override
     public int initView() {
@@ -75,13 +80,17 @@ public class MainActivity extends PJAppCompatActivity {
 
     @Override
     public void initData() {
+        String ipAddress = IpGetUtil.getIPAddress(this);
+        Env.getAppContext().setHostIp(ipAddress);
+    //    Env.getAppContext().setHostIp("10.0.2.2");
         settingFragment = new SettingFragment();
         studentFragment = new StudentFragment();
         tutorFragment = new TutorFragment();
+        chatFragment=new ChatFragment();
 
         fm = getFragmentManager();
         fm.beginTransaction().add(R.id.replace, tutorFragment, "tutorFragment").add(R.id.replace, studentFragment, "studentFragment").hide(studentFragment)
-                .add(R.id.replace, settingFragment, "settingFragment").hide(settingFragment).commit();
+                .add(R.id.replace, chatFragment, "chatFragment").hide(chatFragment) .add(R.id.replace, settingFragment, "settingFragment").hide(settingFragment).commit();
         setSupportActionBar(toolbar);
         bottomBar.setOnTabSelectListener(tabId -> {
             if (tabId == R.id.tab_tutor) {
@@ -91,16 +100,24 @@ public class MainActivity extends PJAppCompatActivity {
                 tvCurrentCity.setVisibility(View.VISIBLE);
                 tvCityBtn.setVisibility(View.VISIBLE);
             }
-            else if (tabId == R.id.tab_student) {
+           /* else if (tabId == R.id.tab_student) {
                 switchFragment(currentTag, "studentFragment");
                 mCurrentFragment = studentFragment;
                 tvPersonInfo.setVisibility(View.GONE);
                 tvCurrentCity.setVisibility(View.VISIBLE);
                 tvCityBtn.setVisibility(View.VISIBLE);
+            }*/else if (tabId==R.id.tab_chat){
+                switchFragment(currentTag, "chatFragment");
+                mCurrentFragment = chatFragment;
+                tvPersonInfo.setText("聊天");
+                tvPersonInfo.setVisibility(View.VISIBLE);
+                tvCurrentCity.setVisibility(View.GONE);
+                tvCityBtn.setVisibility(View.GONE);
             }
             else if (tabId == R.id.tab_setting) {
                 switchFragment(currentTag, "settingFragment");
                 mCurrentFragment = settingFragment;
+                tvPersonInfo.setText("个人信息");
                 tvPersonInfo.setVisibility(View.VISIBLE);
                 tvCurrentCity.setVisibility(View.GONE);
                 tvCityBtn.setVisibility(View.GONE);
@@ -169,5 +186,12 @@ public class MainActivity extends PJAppCompatActivity {
             }
         }
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SocketService.getInstance().stop();
+        System.exit(0);
     }
 }

@@ -52,15 +52,22 @@
 
     </android.support.v7.widget.RecyclerView>
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="horizontal"
         android:background="#555555"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true">
-
         <EditText
             android:id="@+id/ed_chat_inpput"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
             android:layout_height="match_parent" />
-    </RelativeLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:id="@+id/send"
+            android:layout_height="wrap_content"
+            android:text="发送"/>
+    </LinearLayout>
 </RelativeLayout>

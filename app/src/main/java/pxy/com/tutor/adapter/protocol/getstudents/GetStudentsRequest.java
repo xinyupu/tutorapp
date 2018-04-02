@@ -7,7 +7,7 @@ import com.pxy.pangjiao.net.helper.PNet;
  * Created by Administrator on 2018/3/29.
  */
 
-@PNet(api = "http://192.168.1.102:8080/getStudents",method = "GET")
+@PNet(api = "getStudents",method = "GET")
 public class GetStudentsRequest extends NetModel<GetStudentsResponse> {
 
 

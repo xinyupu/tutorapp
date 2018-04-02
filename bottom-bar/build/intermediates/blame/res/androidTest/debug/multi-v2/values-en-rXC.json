@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\work\\tutorapp\\bottom-bar\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en-rXC\\values-en-rXC.xml",
+            "outputFile": "F:\\work\\tutorapp\\bottom-bar\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en-rXC\\values-en-rXC.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pxy\\.gradle\\wrapper\\dists\\gradle-4.2-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\b5baa6d88ba28f31bb62a68698060d69\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\a4651e445cba39da514fad7ca737acec\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

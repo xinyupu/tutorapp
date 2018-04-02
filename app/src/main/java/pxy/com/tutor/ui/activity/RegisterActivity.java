@@ -10,15 +10,21 @@ import android.widget.TextView;
 
 import com.pxy.pangjiao.compiler.injectview.annotation.InitView;
 import com.pxy.pangjiao.compiler.injectview.annotation.OnClick;
+import com.pxy.pangjiao.compiler.mpv.annotation.AutowireProxy;
+import com.pxy.pangjiao.compiler.mpv.annotation.Views;
+import com.pxy.pangjiao.databus.DataBus;
 import com.pxy.pangjiao.mvp.viewmodel.views.PJAppCompatActivity;
 
 import pxy.com.tutor.R;
+import pxy.com.tutor.application.IUserPresent;
+import pxy.com.tutor.application.IUserView;
 
 /**
  * Created by pxy on 2018/4/1.
  */
 
-public class RegisterActivity extends PJAppCompatActivity {
+@Views
+public class RegisterActivity extends PJAppCompatActivity implements IUserView {
 
     @InitView(id = R.id.toolbar)
     public Toolbar toolbar;
@@ -43,6 +49,15 @@ public class RegisterActivity extends PJAppCompatActivity {
     @InitView(id = R.id.pwd_confirm)
     public EditText edPwdConfirm;
 
+    @InitView(id = R.id.name)
+    public EditText edName;
+
+    @InitView(id = R.id.area)
+    public EditText edAraea;
+
+    @AutowireProxy
+    public IUserPresent userPresent;
+
     @Override
     public int initView() {
         return R.layout.activity_register;
@@ -60,10 +75,21 @@ public class RegisterActivity extends PJAppCompatActivity {
     public View.OnClickListener login_Click = view -> {
 
         String no = edNO.getText().toString();
+        String name = edName.getText().toString();
         String pwd = edPwd.getText().toString();
         String pwdC = edPwdConfirm.getText().toString();
+        String area=edAraea.getText().toString();
         if (TextUtils.isEmpty(no)) {
             showToast("编号不能为空");
+            return;
+        }
+        if (TextUtils.isEmpty(area)) {
+            showToast("区域不能为空");
+            return;
+        }
+
+        if (TextUtils.isEmpty(name)) {
+            showToast("姓名不能为空");
             return;
         }
 
@@ -79,5 +105,26 @@ public class RegisterActivity extends PJAppCompatActivity {
             showToast("两次密码输入不一致");
             return;
         }
+        if (checkBox.isChecked()) {
+            userPresent.registerTutor(no, pwd, name,area);
+        } else {
+            userPresent.registerStudent(no, pwd, name,area);
+        }
     };
+
+    @Override
+    public void refresh(Object o) {
+
+    }
+
+    @Override
+    public void registerSuccess(Object o) {
+        DataBus.getDefault().post(o);
+        this.finish();
+    }
+
+    @Override
+    public void loginSuccess(Object o) {
+
+    }
 }
